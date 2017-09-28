@@ -1,0 +1,687 @@
+@import "varsandmixins";
+body {
+    min-height: 100%;
+    width: 100%;
+    font-size: 16px;
+    background: $gray;
+    font-family: $text-font;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn-link,
+.recipe-link,
+.joanna {
+    font-family: $heading-font;
+    font-weight: 300;
+}
+
+label,
+.input-group-addon {
+    font-size: 0.9em;
+}
+
+.custom-control-description {
+    margin: 0.15em 0 0;
+}
+
+.form-steps span,
+legend,
+.header h1,
+.user-logo,
+.meny {
+    font-family: $header-font;
+}
+
+.main {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $orange;
+    background: -webkit-linear-gradient(to top, $yellow, $red);
+    background: linear-gradient(to top, $yellow, $red);
+}
+
+.header {
+    @include flexbox;
+    text-align: center;
+    min-height: 100px;
+    width: 100%;
+    @include flex-direction(column);
+    margin: 0;
+    padding: 0;
+    background: $navy;
+    color: $yellow;
+}
+
+.header h1 {
+    background: $red;
+    background: -webkit-linear-gradient(to top, $yellow, $red);
+    background: linear-gradient(to top, $yellow, $red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+    color: $red;
+    font-size: 1.2em;
+    margin: 0.5em 0 0.5em 0;
+    @include breakpoint(small) {
+        font-size: 1.5em;
+    }
+    @include breakpoint(medium) {
+        font-size: 2em;
+    }
+    @include breakpoint(large) {
+        font-size: 3em;
+    }
+}
+
+.user-logo {
+    color: $orange;
+    display: none;
+    @include breakpoint(large) {
+        display: inline-block;
+    }
+}
+
+.autocomplete {
+    z-index: 999;
+    padding: 1em;
+}
+
+.auto-input {
+    width: 14.8em;
+    @include border-radius (3px);
+    padding: 3.7px;
+    border: none;
+    font-size: 0.9em;
+}
+
+.item {
+    @include border-radius (0);
+}
+
+.nav {
+    @include flexbox;
+    @include align-self(center);
+    width: 100%;
+    max-width: 64em;
+}
+
+.navbar {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    width: 100%;
+    padding: 0.5em 1em 0;
+    max-width: 62em;
+    z-index: 998;
+    background: $navy;
+}
+
+.navbar-toggler {
+    background: $navy;
+    color: $yellow;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    @include align-self(center);
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    &:hover {
+        outline: none;
+        border: none;
+        color: $orange;
+    }
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+//BUTTONS
+.addInputs,
+.reviewBtn,
+.submitBtn,
+.submitInputBtn {
+    // cursor: pointer;
+    background: $navy;
+    color: $yellow;
+    &:hover {
+        color: $navy;
+        background: $yellow;
+        border: 1px solid $navy;
+    }
+}
+
+.editInputBtn {
+    background: $red;
+    color: $yellow;
+    &:hover {
+        color: $red;
+        background: $yellow;
+        border: 1px solid $red;
+    }
+}
+
+.submitInputBtn,
+.editInputBtn {
+    padding: 0 0.5em 0;
+    margin: 0 1em 0;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.editBtn {
+    background: $orange;
+    color: $yellow;
+    &:hover {
+        color: $orange;
+        background: $yellow;
+        border: 1px solid $orange;
+    }
+}
+
+.logInBtn {
+    background: $navy;
+    color: $yellow;
+    margin: 0 0 0.5em;
+    &:hover {
+        color: $navy;
+        background: $gray;
+        border: 1px solid $navy;
+    }
+}
+
+.signUpBtn {
+    background: $orange;
+    color: $gray;
+    &:hover {
+        color: $orange;
+        background: $gray;
+        border: 1px solid $orange;
+    }
+}
+
+.editBtn,
+.submitBtn {
+    margin: 0.5em 0.5em 0;
+}
+
+//Remove default styles for buttons
+button,
+button:active,
+button:focus,
+button:hover,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+// LINKS
+a:hover {
+    text-decoration: none;
+}
+
+.nav-link,
+.recipe-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: $yellow;
+    &:hover {
+        color: $orange;
+    }
+}
+
+.add-recipe {
+    cursor: pointer;
+    text-decoration: none;
+    color: $orange;
+    font-size: 1.2em;
+    border: 1px dotted $orange;
+    &:hover {
+        color: $yellow;
+        text-decoration: none;
+        border: 1px dotted $yellow;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.nav-link {
+    @include breakpoint(medium) {
+        font-size: 1em;
+    }
+}
+
+.btn-link,
+.recipe-link {
+    margin: 0.5em 0 0.5em;
+}
+
+.card-head,
+.card-footer {
+    background: $navy;
+    text-transform: capitalize;
+}
+
+.cards {
+    width: 100%;
+    border-style: none;
+    margin: 0 0 1em;
+    @include flexbox;
+    @include breakpoint(medium) {
+        width: 45%;
+        margin: 0.5em;
+    }
+    @include breakpoint(large) {
+        width: 30%;
+    }
+}
+
+.card {
+    border-style: none;
+}
+
+.card-img-top {
+    width: 50%;
+    margin: 1em;
+    background: $gray;
+    @include breakpoint(medium) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.cards-block {
+    display: none;
+    @include breakpoint(medium) {
+        display: inline-block;
+    }
+}
+
+.card-block {
+    background: $gray;
+    font-size: 1em;
+}
+
+.card-img-bottom {
+    background: $gray;
+    padding: 1em;
+}
+
+.ingredient-list {
+    list-style: none;
+}
+
+.meny {
+    @include flexbox;
+    @include align-items(center);
+    text-align: center;
+    font-size: 0.7em;
+    &:hover {
+        outline: none;
+        border: none;
+    }
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+.flex-container {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.recipes-container,
+.single-container,
+.loginSignUp {
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    margin: 1em 0 0;
+    padding: 0;
+}
+
+.loginSignUp,
+.recipes-container {
+    width: 95%;
+    max-width: 64em;
+}
+
+.loginSignUp {
+    z-index: 96;
+}
+
+.recipes-container {
+    z-index: 99;
+}
+
+.single-container {
+    z-index: 98;
+}
+
+.my-page-header,
+.addDiv,
+.errorMsg,
+.single-container {
+    width: 95%;
+    max-width: 53em;
+}
+
+.formDiv {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(start);
+    margin: 1em;
+    padding: 1em;
+    background: $gray;
+    // @include box-shadow(inset 0 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.formDiv,
+.my-page-header,
+.cards {
+    @include box-shadow(0 0 10px rgba(33, 37, 74, 0.58));
+}
+
+.addDiv {
+    @include box-shadow(0 0 10px rgba(33, 37, 74, 0.38));
+}
+
+//Signup-form
+.form {
+    min-width: 20em;
+}
+
+//recipe form
+.addForm {
+    padding: 0.5em;
+}
+
+.addBtn {
+    @include flexbox;
+    margin: 0 1em 0;
+}
+
+.my-page-header,
+.addDiv {
+    color: $navy;
+}
+
+.my-page-header,
+.addDiv {
+    margin: 1em 0 0.5em 0;
+    padding: 0.5em;
+    z-index: 97;
+    @include breakpoint(medium) {
+        margin: 2em 0 1em 0;
+    }
+}
+
+.my-page-header {
+    background: $gray;
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+}
+
+.about {
+    padding: 0.5em 0.5em 0;
+}
+
+.addDiv {
+    background: $yellow;
+    padding: 0.5em;
+    position: relative;
+}
+
+li:first-letter {
+    text-transform: capitalize;
+}
+
+.input-group-addon {
+    border-style: none;
+    background: $yellow;
+}
+
+.ingredient-added {
+    display: none;
+    @include breakpoint(medium) {
+        display: inline-block;
+    }
+}
+
+.input-group {
+    margin: 0 1em 0.2em;
+}
+
+.form-steps {
+    margin: 0 0 0.2em;
+    background: $gray;
+    display: inline-block;
+    line-height: 0px;
+    @include border-radius (50%);
+    border-style: dotted;
+    border: 1px dotted $navy;
+    font-size: 1.2em;
+}
+
+.form-steps span {
+    color: $navy;
+    display: inline-block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin: 0 0.5em 0;
+}
+
+.recipe-icon {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+}
+
+//error message
+.errorMsg {
+    text-align: center;
+    font-size: 1em;
+    padding: 0.2em;
+    margin: 0.5em 0 0;
+    color: $orange;
+    border: 1px dotted $orange;
+    max-width: 53em;
+}
+
+//error message for inputs
+.errorMsgInput {
+    width: 100%;
+    font-size: 0.8em;
+    color: $red;
+    margin: 0.5em 0 0.5em;
+}
+
+//search group div
+.search-group {
+    @include flex-center;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    background: $navy;
+    color: $yellow;
+    padding: 0.5em 0 1em;
+}
+
+// auto-complete settings
+.custom-select {
+    margin: 0;
+}
+
+.item {
+    color: $navy;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+//Remove default styles for select and inputs
+.check:focus,
+select:focus,
+input:focus {
+    outline: none;
+}
+
+//settings input ingredients
+.input-field {
+    font-size: 0.99em;
+    outline: none;
+    &:disabled {
+        background: $gray;
+    }
+}
+
+// google sign-in 
+fieldset {
+    border-top: 0.2px solid $navy;
+    padding: 0 3em 0;
+    margin: 0;
+}
+
+legend {
+    color: $navy;
+    text-align: center;
+    font-size: 1em;
+    margin: 1em 0 1em;
+    width: 5em;
+}
+
+.google {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+    padding: 0.5em 0 0;
+    margin: 1em 0 0;
+}
+
+//Animation for rotating food icons
+@include keyframe(foodSpinn) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+@include keyframe(foodSpinn2) {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(-360deg));
+    }
+}
+
+.animationContainer {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+}
+
+.animationDiv,
+.animationDiv2,
+.animationDiv3,
+.animationDiv4 {
+    @include flexbox;
+    @include justify-content(center);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+
+.animationDiv,
+.animationDiv3 {
+    @include animationSpinn(foodSpinn2, 50s, linear, infinite);
+}
+
+.animationDiv4,
+.animationDiv2 {
+    @include animationSpinn(foodSpinn, 60s, linear, infinite);
+}
+
+.foods {
+    @include flexbox;
+    margin: 4em;
+}
+
+.food1 {
+    width: 2em;
+    height: 2em;
+    @include animationSpinn(foodSpinn2, 25s, linear, infinite);
+}
+
+.food2 {
+    width: 1.5em;
+    height: 1.5em;
+    @include animationSpinn(foodSpinn, 15s, linear, infinite);
+}
+
+.food3 {
+    width: 1.3em;
+    height: 1.3em;
+    @include animationSpinn(foodSpinn2, 20s, linear, infinite);
+}
+
+.food5,
+.food4 {
+    width: 1.7em;
+    height: 1.7em;
+    @include animationSpinn(foodSpinn, 10s, linear, infinite);
+}
+
+.icon-link {
+    @include flexbox;
+    @include align-self(center);
+    cursor: pointer;
+    text-decoration: none;
+    color: $orange;
+    font-size: 0.7em;
+    margin: 0 1em 0.5em;
+    &:hover {
+        color: $navy;
+    }
+}
+
+.joanna {
+    @include flexbox;
+    @include align-self(center);
+    margin: 1em 0 0.5em;
+}
