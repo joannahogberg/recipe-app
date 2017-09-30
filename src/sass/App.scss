@@ -1,11 +1,15 @@
 @import "varsandmixins";
+html,
+body {
+    overflow-x: hidden
+}
+
 body {
     min-height: 100%;
     width: 100%;
     font-size: 16px;
     background: $gray;
     font-family: $text-font;
-    overflow-x: hidden;
     padding: 0;
     margin: 0;
 }
@@ -30,6 +34,29 @@ label,
 
 .custom-control-description {
     margin: 0.15em 0 0;
+}
+
+.text-muted {
+    color: $orange !important;
+}
+
+.timePortions {
+    margin: -1em 0 -1em;
+}
+
+.single-block {
+    margin: 0 !important;
+}
+
+.single-flex-div {
+    border-bottom: 2px dotted $navy;
+    margin: 0 0 -1em;
+}
+
+.single-title,
+.single-description {
+    border-bottom: 2px dotted $navy;
+    padding: 0 0 1em;
 }
 
 .form-steps span,
@@ -72,8 +99,8 @@ legend,
     -webkit-text-fill-color: transparent;
     font-weight: 300;
     color: $red;
-    font-size: 1.2em;
-    margin: 0.5em 0 0.5em 0;
+    font-size: 1.5em;
+    margin: 0.5em 0 0.2em 0;
     @include breakpoint(small) {
         font-size: 1.5em;
     }
@@ -335,7 +362,7 @@ a:hover {
     @include flexbox;
     @include align-items(center);
     text-align: center;
-    font-size: 0.7em;
+    font-size: 0.8em;
     &:hover {
         outline: none;
         border: none;
@@ -350,6 +377,7 @@ a:hover {
     @include flexbox;
     @include align-items(center);
     @include flex-direction(column);
+    overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
     position: relative;
@@ -445,6 +473,7 @@ a:hover {
 }
 
 .my-page-header {
+    padding-top: 1em;
     background: $gray;
     @include flexbox;
     @include align-items(center);
@@ -610,6 +639,15 @@ legend {
     }
 }
 
+@include keyframe(foodSpinn3) {
+    0% {
+        @include transform(rotate(180deg));
+    }
+    100% {
+        @include transform(rotate(-180deg));
+    }
+}
+
 .animationContainer {
     position: absolute;
     top: 0;
@@ -627,14 +665,22 @@ legend {
     @include flex-wrap(wrap);
 }
 
-.animationDiv,
-.animationDiv3 {
-    @include animationSpinn(foodSpinn2, 50s, linear, infinite);
+.animationDiv3,
+.animationDiv2 {
+    margin: 1em;
+    @include animationSpinn(foodSpinn2, 180s, linear, infinite);
 }
 
 .animationDiv4,
-.animationDiv2 {
-    @include animationSpinn(foodSpinn, 60s, linear, infinite);
+.animationDiv {
+    margin: 2em;
+    @include animationSpinn(foodSpinn, 120s, linear, infinite);
+}
+
+// .animationDiv4,
+.animationDiv {
+    margin: 2em;
+    @include animationSpinn(foodSpinn3, 140s, linear, infinite);
 }
 
 .foods {
@@ -643,28 +689,28 @@ legend {
 }
 
 .food1 {
-    width: 2em;
-    height: 2em;
-    @include animationSpinn(foodSpinn2, 25s, linear, infinite);
+    width: 1.8em;
+    height: 1.8em;
+    @include animationSpinn(foodSpinn3, 25s, linear, infinite);
 }
 
 .food2 {
     width: 1.5em;
     height: 1.5em;
-    @include animationSpinn(foodSpinn, 15s, linear, infinite);
+    @include animationSpinn(foodSpinn, 35s, linear, infinite);
 }
 
 .food3 {
     width: 1.3em;
     height: 1.3em;
-    @include animationSpinn(foodSpinn2, 20s, linear, infinite);
+    @include animationSpinn(foodSpinn2, 30s, linear, infinite);
 }
 
 .food5,
 .food4 {
     width: 1.7em;
     height: 1.7em;
-    @include animationSpinn(foodSpinn, 10s, linear, infinite);
+    @include animationSpinn(foodSpinn3, 40s, linear, infinite);
 }
 
 .icon-link {

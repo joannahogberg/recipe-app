@@ -5,13 +5,16 @@
 /*------------- Flexbox center mixin*/
 /* Mixin for tranform and transition*/
 /*Mixin for animation in flexbox*/
+html,
+body {
+  overflow-x: hidden; }
+
 body {
   min-height: 100%;
   width: 100%;
   font-size: 16px;
   background: #e8edf3;
   font-family: "PT Sans", sans-serif;
-  overflow-x: hidden;
   padding: 0;
   margin: 0; }
 
@@ -33,6 +36,24 @@ label,
 
 .custom-control-description {
   margin: 0.15em 0 0; }
+
+.text-muted {
+  color: #b56969 !important; }
+
+.timePortions {
+  margin: -1em 0 -1em; }
+
+.single-block {
+  margin: 0 !important; }
+
+.single-flex-div {
+  border-bottom: 2px dotted #22264b;
+  margin: 0 0 -1em; }
+
+.single-title,
+.single-description {
+  border-bottom: 2px dotted #22264b;
+  padding: 0 0 1em; }
 
 .form-steps span,
 legend,
@@ -89,8 +110,8 @@ legend,
   -webkit-text-fill-color: transparent;
   font-weight: 300;
   color: #e62739;
-  font-size: 1.2em;
-  margin: 0.5em 0 0.5em 0; }
+  font-size: 1.5em;
+  margin: 0.5em 0 0.2em 0; }
   @media (min-width: 464px) {
     .header h1 {
       font-size: 1.5em; } }
@@ -361,7 +382,7 @@ a:hover {
   -ms-align-items: center;
   align-items: center;
   text-align: center;
-  font-size: 0.7em; }
+  font-size: 0.8em; }
   .meny:hover {
     outline: none;
     border: none; }
@@ -383,6 +404,7 @@ a:hover {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -497,6 +519,7 @@ a:hover {
       margin: 2em 0 1em 0; } }
 
 .my-page-header {
+  padding-top: 1em;
   background: #e8edf3;
   display: -webkit-box;
   display: -moz-box;
@@ -795,6 +818,76 @@ legend {
     -o-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
 
+@-webkit-keyframes foodSpinn3 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@-moz-keyframes foodSpinn3 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@-ms-keyframes foodSpinn3 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@-o-keyframes foodSpinn3 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@keyframes foodSpinn3 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
 .animationContainer {
   position: absolute;
   top: 0;
@@ -824,51 +917,77 @@ legend {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.animationDiv,
-.animationDiv3 {
+.animationDiv3,
+.animationDiv2 {
+  margin: 1em;
   -webkit-animation-name: foodSpinn2;
-  -webkit-animation-duration: 50s;
+  -webkit-animation-duration: 180s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   /* forward prevents the animation from restarting! */
   -moz-animation-name: foodSpinn2;
-  -moz-animation-duration: 50s;
+  -moz-animation-duration: 180s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
   -ms-animation-name: foodSpinn2;
-  -ms-animation-duration: 50s;
+  -ms-animation-duration: 180s;
   -ms-animation-timing-function: linear;
   -ms-animation-iteration-count: infinite;
   -o-animation-name: foodSpinn2;
-  -o-animation-duration: 50s;
+  -o-animation-duration: 180s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
   animation-name: foodSpinn2;
-  animation-duration: 50s;
+  animation-duration: 180s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
 
 .animationDiv4,
-.animationDiv2 {
+.animationDiv {
+  margin: 2em;
   -webkit-animation-name: foodSpinn;
-  -webkit-animation-duration: 60s;
+  -webkit-animation-duration: 120s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   /* forward prevents the animation from restarting! */
   -moz-animation-name: foodSpinn;
-  -moz-animation-duration: 60s;
+  -moz-animation-duration: 120s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
   -ms-animation-name: foodSpinn;
-  -ms-animation-duration: 60s;
+  -ms-animation-duration: 120s;
   -ms-animation-timing-function: linear;
   -ms-animation-iteration-count: infinite;
   -o-animation-name: foodSpinn;
-  -o-animation-duration: 60s;
+  -o-animation-duration: 120s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
   animation-name: foodSpinn;
-  animation-duration: 60s;
+  animation-duration: 120s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+.animationDiv {
+  margin: 2em;
+  -webkit-animation-name: foodSpinn3;
+  -webkit-animation-duration: 140s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  /* forward prevents the animation from restarting! */
+  -moz-animation-name: foodSpinn3;
+  -moz-animation-duration: 140s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-name: foodSpinn3;
+  -ms-animation-duration: 140s;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-name: foodSpinn3;
+  -o-animation-duration: 140s;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  animation-name: foodSpinn3;
+  animation-duration: 140s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
 
@@ -881,26 +1000,26 @@ legend {
   margin: 4em; }
 
 .food1 {
-  width: 2em;
-  height: 2em;
-  -webkit-animation-name: foodSpinn2;
+  width: 1.8em;
+  height: 1.8em;
+  -webkit-animation-name: foodSpinn3;
   -webkit-animation-duration: 25s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   /* forward prevents the animation from restarting! */
-  -moz-animation-name: foodSpinn2;
+  -moz-animation-name: foodSpinn3;
   -moz-animation-duration: 25s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
-  -ms-animation-name: foodSpinn2;
+  -ms-animation-name: foodSpinn3;
   -ms-animation-duration: 25s;
   -ms-animation-timing-function: linear;
   -ms-animation-iteration-count: infinite;
-  -o-animation-name: foodSpinn2;
+  -o-animation-name: foodSpinn3;
   -o-animation-duration: 25s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
-  animation-name: foodSpinn2;
+  animation-name: foodSpinn3;
   animation-duration: 25s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
@@ -909,24 +1028,24 @@ legend {
   width: 1.5em;
   height: 1.5em;
   -webkit-animation-name: foodSpinn;
-  -webkit-animation-duration: 15s;
+  -webkit-animation-duration: 35s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   /* forward prevents the animation from restarting! */
   -moz-animation-name: foodSpinn;
-  -moz-animation-duration: 15s;
+  -moz-animation-duration: 35s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
   -ms-animation-name: foodSpinn;
-  -ms-animation-duration: 15s;
+  -ms-animation-duration: 35s;
   -ms-animation-timing-function: linear;
   -ms-animation-iteration-count: infinite;
   -o-animation-name: foodSpinn;
-  -o-animation-duration: 15s;
+  -o-animation-duration: 35s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
   animation-name: foodSpinn;
-  animation-duration: 15s;
+  animation-duration: 35s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
 
@@ -934,24 +1053,24 @@ legend {
   width: 1.3em;
   height: 1.3em;
   -webkit-animation-name: foodSpinn2;
-  -webkit-animation-duration: 20s;
+  -webkit-animation-duration: 30s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   /* forward prevents the animation from restarting! */
   -moz-animation-name: foodSpinn2;
-  -moz-animation-duration: 20s;
+  -moz-animation-duration: 30s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
   -ms-animation-name: foodSpinn2;
-  -ms-animation-duration: 20s;
+  -ms-animation-duration: 30s;
   -ms-animation-timing-function: linear;
   -ms-animation-iteration-count: infinite;
   -o-animation-name: foodSpinn2;
-  -o-animation-duration: 20s;
+  -o-animation-duration: 30s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
   animation-name: foodSpinn2;
-  animation-duration: 20s;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
 
@@ -959,25 +1078,25 @@ legend {
 .food4 {
   width: 1.7em;
   height: 1.7em;
-  -webkit-animation-name: foodSpinn;
-  -webkit-animation-duration: 10s;
+  -webkit-animation-name: foodSpinn3;
+  -webkit-animation-duration: 40s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   /* forward prevents the animation from restarting! */
-  -moz-animation-name: foodSpinn;
-  -moz-animation-duration: 10s;
+  -moz-animation-name: foodSpinn3;
+  -moz-animation-duration: 40s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
-  -ms-animation-name: foodSpinn;
-  -ms-animation-duration: 10s;
+  -ms-animation-name: foodSpinn3;
+  -ms-animation-duration: 40s;
   -ms-animation-timing-function: linear;
   -ms-animation-iteration-count: infinite;
-  -o-animation-name: foodSpinn;
-  -o-animation-duration: 10s;
+  -o-animation-name: foodSpinn3;
+  -o-animation-duration: 40s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
-  animation-name: foodSpinn;
-  animation-duration: 10s;
+  animation-name: foodSpinn3;
+  animation-duration: 40s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; }
 

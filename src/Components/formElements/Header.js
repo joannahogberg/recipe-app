@@ -5,7 +5,7 @@ function Header(props){
   return(
     <div className="d-flex justify-content-center header">
         {props.children}
-      <h1>Familjen Högbergs Recept</h1>
+      <h1>Pattis Recept App</h1>
     </div>
   );    
 }

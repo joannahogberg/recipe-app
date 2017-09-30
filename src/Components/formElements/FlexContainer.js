@@ -22,15 +22,19 @@ const FlexContainer = (props) => {
 
       <div className="animationContainer">
        <div className="animationDiv4">
-         <img src={Carrot} alt="basket" className="foods food1"/>
           <img src={Pie} alt="basket" className="foods food2"/>
-          <img src={Garlic} alt="basket" className="foods food5"/>
             <img src={Citrus} alt="basket" className="foods food1"/>
           <img src={Bread} alt="basket" className="foods food4"/>
-          <img src={Corn} alt="basket" className="foods food3"/>
+         <img src={Taco} alt="basket" className="foods food2"/>
             <img src={Eggs} alt="basket" className="foods food4"/>
              
-         
+        </div>
+              <div className="animationDiv3">
+          <img src={Pie} alt="basket" className="foods food3"/>
+          <img src={Corn} alt="basket" className="foods food1"/>
+            <img src={Eggs} alt="basket" className="foods food2"/>
+             <img src={Garlic} alt="basket" className="foods food5"/>
+         <img src={Carrot} alt="basket" className="foods food5"/>
          
         </div>
 
@@ -43,25 +47,32 @@ const FlexContainer = (props) => {
              <img src={Fish} alt="basket" className="foods food5"/>
 
         </div>
+              <div className="animationDiv3">
+          <img src={Pie} alt="basket" className="foods food3"/>
+          <img src={Corn} alt="basket" className="foods food3"/>
+            <img src={Eggs} alt="basket" className="foods food2"/>
+             <img src={Garlic} alt="basket" className="foods food3"/>
+         <img src={Carrot} alt="basket" className="foods food5"/>
+         
+        </div>
         <div className="animationDiv2">
           <img src={Fish} alt="basket" className="foods food2"/>
           <img src={Turkey} alt="basket" className="foods food3"/>
             <img src={Carrot} alt="basket" className="foods food1"/>
-             <img src={Taco} alt="basket" className="foods food5"/>
               <img src={Bread} alt="basket" className="foods food3"/>
          <img src={Pizza} alt="basket" className="foods food4"/>
            <img src={Citrus} alt="basket" className="foods food4"/>
         </div>
+            <div className="animationDiv">
+        <img src={Sushi} alt="basket" className="foods food2"/>
+         <img src={Pizza} alt="basket" className="foods food1"/>
+          <img src={Taco} alt="basket" className="foods food2"/>
+           <img src={Carrot} alt="basket" className="foods food3"/>
+            <img src={Turkey} alt="basket" className="foods food3"/>
+             <img src={Fish} alt="basket" className="foods food5"/>
 
-         <div className="animationDiv3">
-          <img src={Pie} alt="basket" className="foods food3"/>
-          <img src={Corn} alt="basket" className="foods food1"/>
-            <img src={Eggs} alt="basket" className="foods food2"/>
-             <img src={Sushi} alt="basket" className="foods food4"/>
-             <img src={Garlic} alt="basket" className="foods food1"/>
-         <img src={Carrot} alt="basket" className="foods food5"/>
-         
         </div>
+         
         </div>
       
     </div>

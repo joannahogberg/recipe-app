@@ -25,30 +25,30 @@ function RecipeSingle(props){
       </div>
            
         <div className="card-block"> 
-            <h5 className="mt-0">{recipe.value.recipeName} </h5>
+            <h5 className="mt-0 single-title">{recipe.value.recipeName} </h5>
            <small className="text-muted">
-          Recept av {user[0]} </small>
-           <p> {recipe.value.description}</p>
+          Recept tillagt av {user[0]} </small>
+           <p className="mb-0 single-description"> {recipe.value.description}</p>
             </div>
-             <div className="card-block">
-                        <div className="d-flex justify-content-start flex-wrap">
-            <div className="p-2">
+             <div className="card-block single-block">
+            <div className="d-flex justify-content-start flex-wrap timePortions">
+            <div className="p-2 mr-3 pt-0">
                 <h6 className="mt-0">Tid:</h6>
             <p> {recipe.value.time} {recipe.value.minHour}</p>
             </div>
-            <div className="p-2">
+            <div className="p-2 ">
             <h6 className="mt-0">Antal portioner:</h6>
             <p> {recipe.value.persons}</p>
             </div>
             
             </div>
                 
-                     <div className="d-flex justify-content-start flex-wrap">
-                <div className="">
+                     <div className="d-flex justify-content-start flex-wrap single-flex-div">
+                <div className="mr-2 p-2">
             <h6 className="mt-0">Du behöver:</h6>
             <ul className="ingredient-list"> {allIngredients}</ul>
             </div>
-            <div className="">
+            <div className="p-2">
             <h6 className="mt-0">Gör såhär:</h6>
             <ol> {allToDos}</ol>
             </div>
@@ -57,7 +57,7 @@ function RecipeSingle(props){
         </div>
        
 
-         <img className="card-img-bottom" src={recipe.value.imageURL} alt={recipe.value.recipeName} style={ {width: "100%"}}/>
+         <img className="card-img-bottom mt-0" src={recipe.value.imageURL} alt={recipe.value.recipeName} style={ {width: "100%"}}/>
     </div>
 
     })

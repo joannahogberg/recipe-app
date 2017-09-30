@@ -112,7 +112,7 @@ console.log("hello")
   signOut = () => {
    firebase.auth().signOut()     
    .then(()=> {
-      this.setState({showLogSignForm : true, showMyPage: false});
+      this.setState({showLogSignForm : true, showMyPage: false, showRecipes: false, showRecipeForm:false});
       console.log("signed out")
     });
   
