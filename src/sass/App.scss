@@ -663,23 +663,22 @@ legend {
     @include justify-content(center);
     @include flex-direction(row);
     @include flex-wrap(wrap);
+    margin: 1em;
 }
 
-.animationDiv3,
-.animationDiv2 {
-    margin: 1em;
+.animationDiv3 {
     @include animationSpinn(foodSpinn2, 180s, linear, infinite);
 }
 
-.animationDiv4,
-.animationDiv {
-    margin: 2em;
+.animationDiv2 {
     @include animationSpinn(foodSpinn, 120s, linear, infinite);
 }
 
-// .animationDiv4,
 .animationDiv {
-    margin: 2em;
+    @include animationSpinn(foodSpinn, 160s, linear, infinite);
+}
+
+.animationDiv4 {
     @include animationSpinn(foodSpinn3, 140s, linear, infinite);
 }
 
